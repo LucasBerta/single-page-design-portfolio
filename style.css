@@ -156,6 +156,7 @@ body {
   border-radius: 3rem;
   padding: 1.5rem 4.5rem;
   background-color: transparent;
+  transition: all 0.2s ease-in-out;
 }
 .btn, .btn:focus, .btn:hover, .btn:active {
   outline: none;
@@ -165,9 +166,15 @@ body {
   background-color: #030303;
   color: #fff7f0;
 }
+.btn-primary:hover {
+  background-color: #755cde;
+}
 .btn-accent {
   background-color: #eb7565;
   color: #fff7f0;
+}
+.btn-accent:hover {
+  background-color: #f6a560;
 }
 .btn-circle {
   border-radius: 50%;

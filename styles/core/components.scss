@@ -8,6 +8,7 @@
   border-radius: 3rem;
   padding: 1.5rem 4.5rem;
   background-color: transparent;
+  transition: all 0.2s ease-in-out;
 
   &,
   &:focus,
@@ -20,11 +21,19 @@
   &-primary {
     background-color: $primary;
     color: $lightCream;
+
+    &:hover {
+      background-color: $galacticBlue;
+    }
   }
 
   &-accent {
     background-color: $accent;
     color: $lightCream;
+
+    &:hover {
+      background-color: $summerYellow;
+    }
   }
 
   &-circle {
