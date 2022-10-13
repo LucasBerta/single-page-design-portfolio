@@ -1,0 +1,15 @@
+{
+  "name": "single-page-design-portfolio",
+  "version": "1.0.0",
+  "description": "## Frontend mentor challange",
+  "scripts": {
+    "watchSass": "sass --watch index.scss style.css"
+  },
+  "author": "Lucas Berta",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.55.0"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,17 @@
+@import "../core/variables.scss";
+
+body {
+  display: grid;
+  padding-top: 3rem;
+  row-gap: $mainGridGap;
+  column-gap: 3rem;
+  grid-template-rows: repeat(5, max-content);
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas:
+    "....... topbar     topbar     topbar     topbar     topbar     topbar    ......"
+    "....... solutions  solutions  solutions  solutions  solutions  solutions ......"
+    "....... whoIAm     whoIAm     whoIAm     whoIAm     whoIAm     whoIAm    ......"
+    "myWork  myWork     myWork     myWork     myWork     myWork     myWork    myWork"
+    "....... bookCall   bookCall   bookCall   bookCall   bookCall   bookCall  ......"
+    "....... footer     footer     footer     footer     footer     footer    ......";
+}

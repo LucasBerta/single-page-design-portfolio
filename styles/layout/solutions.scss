@@ -1,0 +1,96 @@
+@import "../core/variables.scss";
+
+$cardLogoL: 19.2rem;
+$cardLogoM: 6.4rem;
+
+.solutions {
+  grid-area: solutions;
+  color: $primary;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  grid-template-areas:
+    "..... title title title title ....."
+    "card1 card1 card2 card3 card5 card5"
+    "card1 card1 card4 card4 card6 card6";
+
+  &__title-container {
+    grid-area: title;
+
+    p {
+      padding: 0 7rem;
+      color: $mediumBrown;
+    }
+  }
+
+  div[class^="solutions--card"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    color: $white;
+    font-size: 2.4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      object-fit: contain;
+      align-self: flex-end;
+    }
+
+    h4 {
+      align-self: flex-start;
+    }
+  }
+
+  &--card-2,
+  &--card-3,
+  &--card-4,
+  &--card-5,
+  &--card-6 {
+    img {
+      height: $cardLogoM;
+    }
+  }
+
+  &--card-1 {
+    height: 36.4rem;
+    grid-area: card1;
+    background-color: $galacticBlue;
+
+    img {
+      height: $cardLogoL;
+    }
+  }
+
+  &--card-2 {
+    grid-area: card2;
+    background-color: $summerYellow;
+  }
+
+  &--card-3 {
+    grid-area: card3;
+    background-color: $pink;
+  }
+
+  &--card-4 {
+    grid-area: card4;
+    background-color: $accent;
+  }
+
+  &--card-5 {
+    grid-area: card5;
+    background-color: $cyan;
+  }
+
+  &--card-6 {
+    grid-area: card6;
+    background-color: $darkPurple;
+  }
+}

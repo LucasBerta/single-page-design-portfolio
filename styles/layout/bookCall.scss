@@ -1,0 +1,16 @@
+@import "../core/variables.scss";
+
+.book-call {
+  grid-area: bookCall;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rem;
+  background-color: $primary;
+  color: $lightCream;
+  border-radius: 1rem;
+
+  div {
+    width: 50%;
+  }
+}

@@ -1,0 +1,20 @@
+.who-i-am {
+  grid-area: whoIAm;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: $mainGridGap;
+
+  img {
+    height: 44.5rem;
+  }
+
+  &__text-container {
+    width: 54rem;
+
+    p {
+      color: $mediumBrown;
+      margin-bottom: 4rem;
+    }
+  }
+}

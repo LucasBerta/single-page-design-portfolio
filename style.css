@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Manrope:wght@600;700;800&family=Merriweather:wght@300;400;700&family=Outfit:wght@300;400;700&family=Overpass:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;700&family=Tiro+Telugu&display=swap");
+body {
+  display: grid;
+  padding-top: 3rem;
+  row-gap: 6rem;
+  column-gap: 3rem;
+  grid-template-rows: repeat(5, max-content);
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas: "....... topbar     topbar     topbar     topbar     topbar     topbar    ......" "....... solutions  solutions  solutions  solutions  solutions  solutions ......" "....... whoIAm     whoIAm     whoIAm     whoIAm     whoIAm     whoIAm    ......" "myWork  myWork     myWork     myWork     myWork     myWork     myWork    myWork" "....... bookCall   bookCall   bookCall   bookCall   bookCall   bookCall  ......" "....... footer     footer     footer     footer     footer     footer    ......";
+}
+
+.topbar {
+  grid-area: topbar;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.solutions {
+  grid-area: solutions;
+  color: #030303;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  grid-template-areas: "..... title title title title ....." "card1 card1 card2 card3 card5 card5" "card1 card1 card4 card4 card6 card6";
+}
+.solutions__title-container {
+  grid-area: title;
+}
+.solutions__title-container p {
+  padding: 0 7rem;
+  color: #7a746e;
+}
+.solutions div[class^=solutions--card] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  color: #ffffff;
+  font-size: 2.4rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+.solutions div[class^=solutions--card]:hover {
+  transform: scale(1.05);
+}
+.solutions div[class^=solutions--card] img {
+  object-fit: contain;
+  align-self: flex-end;
+}
+.solutions div[class^=solutions--card] h4 {
+  align-self: flex-start;
+}
+.solutions--card-2 img, .solutions--card-3 img, .solutions--card-4 img, .solutions--card-5 img, .solutions--card-6 img {
+  height: 6.4rem;
+}
+.solutions--card-1 {
+  height: 36.4rem;
+  grid-area: card1;
+  background-color: #755cde;
+}
+.solutions--card-1 img {
+  height: 19.2rem;
+}
+.solutions--card-2 {
+  grid-area: card2;
+  background-color: #f6a560;
+}
+.solutions--card-3 {
+  grid-area: card3;
+  background-color: #f39e9e;
+}
+.solutions--card-4 {
+  grid-area: card4;
+  background-color: #eb7565;
+}
+.solutions--card-5 {
+  grid-area: card5;
+  background-color: #61c4b7;
+}
+.solutions--card-6 {
+  grid-area: card6;
+  background-color: #552049;
+}
+
+.who-i-am {
+  grid-area: whoIAm;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6rem;
+}
+.who-i-am img {
+  height: 44.5rem;
+}
+.who-i-am__text-container {
+  width: 54rem;
+}
+.who-i-am__text-container p {
+  color: #7a746e;
+  margin-bottom: 4rem;
+}
+
+.my-work {
+  grid-area: myWork;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.my-work .slide {
+  width: 100%;
+  overflow-x: hidden;
+}
+.my-work .slide img {
+  height: 100%;
+  max-height: 36rem;
+  border-radius: 1rem;
+  margin: 0 1rem;
+}
+.my-work .slide--buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 14.4rem;
+  margin-top: 6rem;
+}
+
+.book-call {
+  grid-area: bookCall;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rem;
+  background-color: #030303;
+  color: #fff7f0;
+  border-radius: 1rem;
+}
+.book-call div {
+  width: 50%;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 6rem;
+}
+
+.btn {
+  cursor: pointer;
+  height: 5.6rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 3rem;
+  padding: 1.5rem 4.5rem;
+  background-color: transparent;
+}
+.btn, .btn:focus, .btn:hover, .btn:active {
+  outline: none;
+  border: none;
+}
+.btn-primary {
+  background-color: #030303;
+  color: #fff7f0;
+}
+.btn-accent {
+  background-color: #eb7565;
+  color: #fff7f0;
+}
+.btn-circle {
+  border-radius: 50%;
+  width: 6.4rem;
+  height: 6.4rem;
+  font-size: 2.2rem;
+  padding: 0.5rem;
+}
+
+h1 {
+  font-size: 5.6rem;
+  line-height: 7rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 5.1rem;
+  margin-bottom: 3rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  margin-bottom: 3rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  /* 1 rem = 10px; 10px/16px = 62.5% */
+  font-size: 62.5%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

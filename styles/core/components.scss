@@ -1,0 +1,37 @@
+@import "./variables.scss";
+
+.btn {
+  cursor: pointer;
+  height: 5.6rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 3rem;
+  padding: 1.5rem 4.5rem;
+  background-color: transparent;
+
+  &,
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+    border: none;
+  }
+
+  &-primary {
+    background-color: $primary;
+    color: $lightCream;
+  }
+
+  &-accent {
+    background-color: $accent;
+    color: $lightCream;
+  }
+
+  &-circle {
+    border-radius: 50%;
+    width: 6.4rem;
+    height: 6.4rem;
+    font-size: 2.2rem;
+    padding: 0.5rem;
+  }
+}

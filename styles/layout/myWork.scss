@@ -1,0 +1,32 @@
+@import "../core/variables.scss";
+
+.my-work {
+  grid-area: myWork;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .slide {
+    width: 100%;
+    overflow-x: hidden;
+
+    img {
+      height: 100%;
+      max-height: 36rem;
+      border-radius: 1rem;
+      margin: 0 1rem;
+
+      // &:not(:first-child) {
+      //   margin-left: 2rem;
+      // }
+    }
+
+    &--buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 14.4rem;
+      margin-top: $mainGridGap;
+    }
+  }
+}
