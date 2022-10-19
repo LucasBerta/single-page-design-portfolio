@@ -1,7 +1,12 @@
+@import "../core/mixins.scss";
 @import "../core/variables.scss";
 
 :root {
   --slides-visible: 3;
+
+  @include screenSizeTablet {
+    --slides-visible: 1;
+  }
 }
 
 #my-work {
@@ -25,6 +30,13 @@
       border-radius: 1rem;
       margin-right: $gap;
       transition: transform 0.2s ease-in-out;
+
+      @include screenSizeTablet {
+        margin-right: 0;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+      }
     }
 
     &--buttons {

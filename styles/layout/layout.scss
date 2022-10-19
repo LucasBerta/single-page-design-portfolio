@@ -4,26 +4,30 @@
 body {
   display: grid;
   padding-top: 3rem;
-  row-gap: $mainGridGap;
-  column-gap: 3rem;
+  gap: $mainGridGap;
   grid-template-rows: repeat(5, max-content);
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: minmax(1fr, 2rem) repeat(6, 1fr) minmax(1fr, 2rem);
   grid-template-areas:
     "....... topbar     topbar     topbar     topbar     topbar     topbar    ......"
+    "....... ........   ........   ........   ........   ........   ........  ......"
     "....... solutions  solutions  solutions  solutions  solutions  solutions ......"
     "....... whoIAm     whoIAm     whoIAm     whoIAm     whoIAm     whoIAm    ......"
     "myWork  myWork     myWork     myWork     myWork     myWork     myWork    myWork"
     "....... bookCall   bookCall   bookCall   bookCall   bookCall   bookCall  ......"
+    "....... ........   ........   ........   ........   ........   ........  ......"
     "....... footer     footer     footer     footer     footer     footer    ......";
 
   @include screenSizeTablet {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 0.5rem repeat(4, 1fr) 0.5rem;
     grid-template-areas:
-      "topbar"
-      "solutions"
-      "whoIAm"
-      "myWork"
-      "bookCall"
-      "footer";
+      "...... topbar    topbar    topbar    topbar    ......"
+      "...... ........  ........  ........  ........  ......"
+      "...... solutions solutions solutions solutions ......"
+      "whoIAm whoIAm    whoIAm    whoIAm    whoIAm    ......"
+      "myWork myWork    myWork    myWork    myWork    myWork"
+      "...... bookCall  bookCall  bookCall  bookCall  ......"
+      "...... ........  ........  ........  ........  ......"
+      "...... footer    footer    footer    footer    ......";
+    gap: 3rem;
   }
 }

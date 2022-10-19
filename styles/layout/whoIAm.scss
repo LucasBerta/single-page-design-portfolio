@@ -1,3 +1,6 @@
+@import "../core/mixins.scss";
+@import "../core/variables.scss";
+
 #who-i-am {
   grid-area: whoIAm;
   display: flex;
@@ -7,10 +10,22 @@
 
   img {
     height: 44.5rem;
+
+    @include screenSizeTablet {
+      margin-left: -$mainGridGap * 0.75;
+      max-width: 50%;
+      width: auto;
+      height: auto;
+    }
   }
 
   .who-i-am__text-container {
-    width: 54rem;
+    width: 50%;
+    max-width: 54rem;
+    margin-left: $mainGridGap;
+
+    @include screenSizeTablet {
+    }
 
     p {
       color: $mediumBrown;

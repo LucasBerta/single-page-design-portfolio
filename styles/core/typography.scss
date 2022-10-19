@@ -1,14 +1,25 @@
+@import "./variables.scss";
+
 // Typography
 h1 {
   font-size: 5.6rem;
   line-height: 7rem;
   margin-bottom: 2rem;
+
+  @include screenSizeTablet {
+    font-size: 4.4rem;
+  }
 }
 
 h2 {
   font-size: 4rem;
   line-height: 5.1rem;
   margin-bottom: 3rem;
+
+  @include screenSizeTablet {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
 }
 
 h3 {

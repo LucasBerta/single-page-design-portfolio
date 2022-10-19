@@ -10,9 +10,11 @@ $cardLogoM: 6.4rem;
   text-align: center;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 2rem;
+  gap: 3rem;
   grid-template-areas:
     "..... title title title title ....."
+    "..... ..... ..... ..... ..... ....."
+    "..... ..... ..... ..... ..... ....."
     "card1 card1 card2 card3 card5 card5"
     "card1 card1 card4 card4 card6 card6";
 
@@ -20,17 +22,22 @@ $cardLogoM: 6.4rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
       "title title title title"
+      "..... ..... ..... ....."
+      "..... ..... ..... ....."
       "card1 card1 card2 card3"
       "card1 card1 card4 card4"
       "card5 card5 card6 card6";
+    gap: 2rem;
   }
 
   .solutions {
+    $highestCard: 37rem;
+
     &__title-container {
       grid-area: title;
 
       p {
-        padding: 0 7rem;
+        padding: 0 15%;
         color: $mediumBrown;
       }
     }
@@ -46,7 +53,7 @@ $cardLogoM: 6.4rem;
     }
 
     &--card-1 {
-      height: 36.4rem;
+      height: $highestCard;
       grid-area: card1;
       background-color: $galacticBlue;
 
@@ -73,11 +80,19 @@ $cardLogoM: 6.4rem;
     &--card-5 {
       grid-area: card5;
       background-color: $cyan;
+
+      @include screenSizeTablet {
+        height: $highestCard * 0.5;
+      }
     }
 
     &--card-6 {
       grid-area: card6;
       background-color: $darkPurple;
+
+      @include screenSizeTablet {
+        height: $highestCard * 0.5;
+      }
     }
   }
 
@@ -89,12 +104,6 @@ $cardLogoM: 6.4rem;
     color: $white;
     font-size: 2.4rem;
     border-radius: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s ease-out;
-
-    &:hover {
-      transform: scale(1.05);
-    }
 
     img {
       object-fit: contain;

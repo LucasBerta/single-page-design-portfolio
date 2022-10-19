@@ -1,6 +1,13 @@
+@import "../core/mixins.scss";
+@import "../core/variables.scss";
+
 #topbar {
   grid-area: topbar;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include screenSizeTablet {
+    // padding: 0 $mainGridGap;
+  }
 }

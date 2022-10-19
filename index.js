@@ -16,12 +16,12 @@ function slide(direction) {
   ).getPropertyValue("--slides-visible");
 
   if (direction === "left") {
-    if (slideIndex >= imgs.length - slidesVisible) return;
-    slideIndex++;
-  }
-  if (direction === "right") {
     if (slideIndex <= 0) return;
     slideIndex--;
+  }
+  if (direction === "right") {
+    if (slideIndex >= imgs.length - slidesVisible) return;
+    slideIndex++;
   }
 
   for (let index = 0; index < imgs.length; index++) {
@@ -32,11 +32,11 @@ function slide(direction) {
     const currentTranslate = new WebKitCSSMatrix(style.transform).m41;
     if (direction === "left") {
       element.style.transform = `translateX(${
-        currentTranslate - imgWidth - marginRight
+        currentTranslate + imgWidth + marginRight
       }px)`;
     } else if (direction === "right") {
       element.style.transform = `translateX(${
-        currentTranslate + imgWidth + marginRight
+        currentTranslate - imgWidth - marginRight
       }px)`;
     }
   }

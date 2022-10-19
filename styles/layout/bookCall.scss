@@ -1,3 +1,4 @@
+@import "../core/mixins.scss";
 @import "../core/variables.scss";
 
 #book-call {
@@ -9,6 +10,17 @@
   background-color: $primary;
   color: $lightCream;
   border-radius: 1rem;
+
+  @include screenSizeTablet {
+    flex-direction: column;
+    padding: 7rem;
+    text-align: center;
+
+    .book-call__text-container {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
 
   div {
     width: 50%;
