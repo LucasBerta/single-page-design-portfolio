@@ -8,15 +8,21 @@ body {
   grid-template-columns: repeat(8, 1fr);
   grid-template-areas: "....... topbar     topbar     topbar     topbar     topbar     topbar    ......" "....... solutions  solutions  solutions  solutions  solutions  solutions ......" "....... whoIAm     whoIAm     whoIAm     whoIAm     whoIAm     whoIAm    ......" "myWork  myWork     myWork     myWork     myWork     myWork     myWork    myWork" "....... bookCall   bookCall   bookCall   bookCall   bookCall   bookCall  ......" "....... footer     footer     footer     footer     footer     footer    ......";
 }
+@media screen and (max-width: 768px) {
+  body {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "topbar" "solutions" "whoIAm" "myWork" "bookCall" "footer";
+  }
+}
 
-.topbar {
+#topbar {
   grid-area: topbar;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.solutions {
+#solutions {
   grid-area: solutions;
   color: #030303;
   text-align: center;
@@ -25,14 +31,51 @@ body {
   gap: 2rem;
   grid-template-areas: "..... title title title title ....." "card1 card1 card2 card3 card5 card5" "card1 card1 card4 card4 card6 card6";
 }
-.solutions__title-container {
+@media screen and (max-width: 768px) {
+  #solutions {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "title title title title" "card1 card1 card2 card3" "card1 card1 card4 card4" "card5 card5 card6 card6";
+  }
+}
+#solutions .solutions__title-container {
   grid-area: title;
 }
-.solutions__title-container p {
+#solutions .solutions__title-container p {
   padding: 0 7rem;
   color: #7a746e;
 }
-.solutions div[class^=solutions--card] {
+#solutions .solutions--card-2 img, #solutions .solutions--card-3 img, #solutions .solutions--card-4 img, #solutions .solutions--card-5 img, #solutions .solutions--card-6 img {
+  height: 6.4rem;
+}
+#solutions .solutions--card-1 {
+  height: 36.4rem;
+  grid-area: card1;
+  background-color: #755cde;
+}
+#solutions .solutions--card-1 img {
+  height: 19.2rem;
+}
+#solutions .solutions--card-2 {
+  grid-area: card2;
+  background-color: #f6a560;
+}
+#solutions .solutions--card-3 {
+  grid-area: card3;
+  background-color: #f39e9e;
+}
+#solutions .solutions--card-4 {
+  grid-area: card4;
+  background-color: #eb7565;
+}
+#solutions .solutions--card-5 {
+  grid-area: card5;
+  background-color: #61c4b7;
+}
+#solutions .solutions--card-6 {
+  grid-area: card6;
+  background-color: #552049;
+}
+#solutions div[class^=solutions--card] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -43,90 +86,65 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease-out;
 }
-.solutions div[class^=solutions--card]:hover {
+#solutions div[class^=solutions--card]:hover {
   transform: scale(1.05);
 }
-.solutions div[class^=solutions--card] img {
+#solutions div[class^=solutions--card] img {
   object-fit: contain;
   align-self: flex-end;
 }
-.solutions div[class^=solutions--card] h4 {
+#solutions div[class^=solutions--card] h4 {
   align-self: flex-start;
 }
-.solutions--card-2 img, .solutions--card-3 img, .solutions--card-4 img, .solutions--card-5 img, .solutions--card-6 img {
-  height: 6.4rem;
-}
-.solutions--card-1 {
-  height: 36.4rem;
-  grid-area: card1;
-  background-color: #755cde;
-}
-.solutions--card-1 img {
-  height: 19.2rem;
-}
-.solutions--card-2 {
-  grid-area: card2;
-  background-color: #f6a560;
-}
-.solutions--card-3 {
-  grid-area: card3;
-  background-color: #f39e9e;
-}
-.solutions--card-4 {
-  grid-area: card4;
-  background-color: #eb7565;
-}
-.solutions--card-5 {
-  grid-area: card5;
-  background-color: #61c4b7;
-}
-.solutions--card-6 {
-  grid-area: card6;
-  background-color: #552049;
-}
 
-.who-i-am {
+#who-i-am {
   grid-area: whoIAm;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 6rem;
 }
-.who-i-am img {
+#who-i-am img {
   height: 44.5rem;
 }
-.who-i-am__text-container {
+#who-i-am .who-i-am__text-container {
   width: 54rem;
 }
-.who-i-am__text-container p {
+#who-i-am .who-i-am__text-container p {
   color: #7a746e;
   margin-bottom: 4rem;
 }
 
-.my-work {
+:root {
+  --slides-visible: 3;
+}
+
+#my-work {
   grid-area: myWork;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.my-work .slide {
+#my-work .slide {
   width: 100%;
   overflow-x: hidden;
+  white-space: nowrap;
 }
-.my-work .slide img {
-  height: 100%;
+#my-work .slide img {
+  width: calc(100% / var(--slides-visible) - 1rem / var(--slides-visible));
   max-height: 36rem;
   border-radius: 1rem;
-  margin: 0 1rem;
+  margin-right: 1rem;
+  transition: transform 0.2s ease-in-out;
 }
-.my-work .slide--buttons {
+#my-work .slide--buttons {
   display: flex;
   justify-content: space-between;
   width: 14.4rem;
   margin-top: 6rem;
 }
 
-.book-call {
+#book-call {
   grid-area: bookCall;
   display: flex;
   align-items: center;
@@ -136,11 +154,11 @@ body {
   color: #fff7f0;
   border-radius: 1rem;
 }
-.book-call div {
+#book-call div {
   width: 50%;
 }
 
-.footer {
+#footer {
   grid-area: footer;
   display: flex;
   justify-content: space-between;

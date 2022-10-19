@@ -1,0 +1,6 @@
+// Responsive
+@mixin screenSizeTablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}

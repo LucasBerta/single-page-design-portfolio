@@ -1,4 +1,4 @@
-.who-i-am {
+#who-i-am {
   grid-area: whoIAm;
   display: flex;
   align-items: center;
@@ -9,7 +9,7 @@
     height: 44.5rem;
   }
 
-  &__text-container {
+  .who-i-am__text-container {
     width: 54rem;
 
     p {

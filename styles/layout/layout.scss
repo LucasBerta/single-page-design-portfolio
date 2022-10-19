@@ -1,3 +1,4 @@
+@import "../core/mixins.scss";
 @import "../core/variables.scss";
 
 body {
@@ -14,4 +15,15 @@ body {
     "myWork  myWork     myWork     myWork     myWork     myWork     myWork    myWork"
     "....... bookCall   bookCall   bookCall   bookCall   bookCall   bookCall  ......"
     "....... footer     footer     footer     footer     footer     footer    ......";
+
+  @include screenSizeTablet {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "topbar"
+      "solutions"
+      "whoIAm"
+      "myWork"
+      "bookCall"
+      "footer";
+  }
 }

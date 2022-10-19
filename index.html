@@ -24,11 +24,11 @@
     <title>Frontend Mentor | Single-page design portfolio</title>
   </head>
   <body>
-    <div class="topbar">
+    <section id="topbar">
       <img src="./assets/logo.svg" alt="Logo" class="logo" />
       <button class="btn btn-primary">Free Consultation</button>
-    </div>
-    <div class="solutions">
+    </section>
+    <section id="solutions">
       <div class="solutions__title-container">
         <h1>Design solutions made easy</h1>
         <p>
@@ -60,8 +60,8 @@
         <img src="./assets/pattern-motion-graphics.svg" alt="Motion graphics" />
         <h4>Motion Graphics</h4>
       </div>
-    </div>
-    <div class="who-i-am">
+    </section>
+    <section id="who-i-am">
       <img src="./assets/image-amy.webp" alt="Amy" />
       <div class="who-i-am__text-container">
         <h2>I’m Amy, and I’d love to work on your next project</h2>
@@ -72,9 +72,16 @@
         </p>
         <button class="btn btn-accent">Free Consultation</button>
       </div>
-    </div>
-    <div class="my-work">
+    </section>
+    <section id="my-work">
       <h3>My Work</h3>
+      <!-- <div class="slide">
+        <img src="./assets/image-slide-1.jpg" alt="Slide 1" />
+        <img src="./assets/image-slide-2.jpg" alt="Slide 2" />
+        <img src="./assets/image-slide-3.jpg" alt="Slide 3" />
+        <img src="./assets/image-slide-4.jpg" alt="Slide 4" />
+        <img src="./assets/image-slide-5.jpg" alt="Slide 5" />
+      </div> -->
       <div class="slide">
         <img src="./assets/image-slide-1.jpg" alt="Slide 1" />
         <img src="./assets/image-slide-2.jpg" alt="Slide 2" />
@@ -82,9 +89,22 @@
         <img src="./assets/image-slide-4.jpg" alt="Slide 4" />
         <img src="./assets/image-slide-5.jpg" alt="Slide 5" />
       </div>
-      <div class="slide--buttons"></div>
-    </div>
-    <div class="book-call">
+      <div class="slide--buttons">
+        <button
+          id="slide-prev"
+          class="btn btn-primary btn-circle material-symbols-outlined"
+        >
+          arrow_back
+        </button>
+        <button
+          id="slide-next"
+          class="btn btn-primary btn-circle material-symbols-outlined"
+        >
+          arrow_forward
+        </button>
+      </div>
+    </section>
+    <section id="book-call">
       <div class="book-call__text-container">
         <h3>Book a call with me</h3>
         <p>
@@ -94,17 +114,12 @@
         </p>
       </div>
       <button class="btn btn-accent">Free Consultation</button>
-    </div>
-    <footer class="footer">
+    </section>
+    <footer id="footer">
       <img src="./assets/logo.svg" alt="Logo" class="logo" />
       <button class="btn btn-primary">Free Consultation</button>
     </footer>
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script
-    type="text/javascript"
-    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-  ></script>
   <script src="./index.js"></script>
 </html>

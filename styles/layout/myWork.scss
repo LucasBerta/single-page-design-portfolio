@@ -1,6 +1,10 @@
 @import "../core/variables.scss";
 
-.my-work {
+:root {
+  --slides-visible: 3;
+}
+
+#my-work {
   grid-area: myWork;
 
   display: flex;
@@ -10,16 +14,17 @@
   .slide {
     width: 100%;
     overflow-x: hidden;
+    white-space: nowrap;
 
     img {
-      height: 100%;
+      $gap: 1rem;
+      $imgWidth: calc(100% / var(--slides-visible) - #{$gap} / var(--slides-visible));
+
+      width: $imgWidth;
       max-height: 36rem;
       border-radius: 1rem;
-      margin: 0 1rem;
-
-      // &:not(:first-child) {
-      //   margin-left: 2rem;
-      // }
+      margin-right: $gap;
+      transition: transform 0.2s ease-in-out;
     }
 
     &--buttons {
