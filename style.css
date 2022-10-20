@@ -9,6 +9,12 @@
   background-color: transparent;
   transition: all 0.2s ease-in-out;
 }
+@media screen and (max-width: 540px) {
+  .btn {
+    font-size: 1.4rem;
+    padding: 1.2rem 3.5rem;
+  }
+}
 .btn, .btn:focus, .btn:hover, .btn:active {
   outline: none;
   border: none;
@@ -43,6 +49,13 @@ h1 {
 @media screen and (max-width: 860px) {
   h1 {
     font-size: 4.4rem;
+    line-height: 6rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  h1 {
+    font-size: 3.6rem;
+    line-height: 4.5rem;
   }
 }
 
@@ -57,11 +70,23 @@ h2 {
     line-height: 4rem;
   }
 }
+@media screen and (max-width: 540px) {
+  h2 {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+}
 
 h3 {
   font-size: 3.2rem;
   line-height: 4rem;
   margin-bottom: 3rem;
+}
+@media screen and (max-width: 540px) {
+  h3 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
 }
 
 h4 {
@@ -73,20 +98,33 @@ p {
   font-size: 1.8rem;
   line-height: 2.8rem;
 }
+@media screen and (max-width: 860px) {
+  p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
 
 body {
   display: grid;
   padding-top: 3rem;
   gap: 6rem;
-  grid-template-rows: repeat(5, max-content);
   grid-template-columns: minmax(1fr, 2rem) repeat(6, 1fr) minmax(1fr, 2rem);
-  grid-template-areas: "....... topbar     topbar     topbar     topbar     topbar     topbar    ......" "....... solutions  solutions  solutions  solutions  solutions  solutions ......" "....... whoIAm     whoIAm     whoIAm     whoIAm     whoIAm     whoIAm    ......" "....... ........   ........   ........   ........   ........   ........  ......" "myWork  myWork     myWork     myWork     myWork     myWork     myWork    myWork" "....... ........   ........   ........   ........   ........   ........  ......" "....... bookCall   bookCall   bookCall   bookCall   bookCall   bookCall  ......" "....... ........   ........   ........   ........   ........   ........  ......" "....... footer     footer     footer     footer     footer     footer    ......";
+  grid-template-areas: "....... topbar     topbar     topbar     topbar     topbar     topbar    ......" "....... solutions  solutions  solutions  solutions  solutions  solutions ......" "....... whoIAm     whoIAm     whoIAm     whoIAm     whoIAm     whoIAm    ......" "....... ........   ........   ........   ........   ........   ........  ......" "myWork  myWork     myWork     myWork     myWork     myWork     myWork    myWork" "....... ........   ........   ........   ........   ........   ........  ......" "....... bookCall   bookCall   bookCall   bookCall   bookCall   bookCall  ......" "....... ........   ........   ........   ........   ........   ........  ......" "....... footer     footer     footer     footer     footer     footer    ......" "author  author     author     author     author     author     author    author";
 }
 @media screen and (max-width: 860px) {
   body {
     grid-template-columns: 0.5rem repeat(4, 1fr) 0.5rem;
-    grid-template-areas: "...... topbar    topbar    topbar    topbar    ......" "...... solutions solutions solutions solutions ......" "whoIAm whoIAm    whoIAm    whoIAm    whoIAm    ......" "...... ........  ........  ........  ........  ......" "myWork myWork    myWork    myWork    myWork    myWork" "...... ........  ........  ........  ........  ......" "...... bookCall  bookCall  bookCall  bookCall  ......" "...... ........  ........  ........  ........  ......" "...... footer    footer    footer    footer    ......";
+    grid-template-areas: "...... topbar    topbar    topbar    topbar    ......" "...... solutions solutions solutions solutions ......" "whoIAm whoIAm    whoIAm    whoIAm    whoIAm    ......" "...... ........  ........  ........  ........  ......" "myWork myWork    myWork    myWork    myWork    myWork" "...... ........  ........  ........  ........  ......" "...... bookCall  bookCall  bookCall  bookCall  ......" "...... ........  ........  ........  ........  ......" "...... footer    footer    footer    footer    ......" "author author    author    author    author    author";
     gap: 3rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  body {
+    grid-template-columns: 0 1fr 0;
+    grid-template-areas: "...... topbar    ......" "...... solutions ......" "...... whoIAm    ......" "...... ........  ......" "myWork myWork    myWork" "...... ........  ......" "...... ........  ......" "...... bookCall  ......" "...... ........  ......" "...... footer    ......" "author author    author";
+    row-gap: 3rem;
+    column-gap: 2rem;
   }
 }
 
@@ -96,6 +134,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 #solutions {
   grid-area: solutions;
   color: #030303;
@@ -112,12 +151,24 @@ body {
     gap: 2rem;
   }
 }
+@media screen and (max-width: 540px) {
+  #solutions {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "title title" "..... ....." "card1 card1" "card2 card3" "card2 card3" "card4 card4" "card5 card5" "card6 card6";
+    gap: 2rem;
+  }
+}
 #solutions .solutions__title-container {
   grid-area: title;
 }
 #solutions .solutions__title-container p {
   padding: 0 15%;
   color: #7a746e;
+}
+@media screen and (max-width: 540px) {
+  #solutions .solutions__title-container p {
+    padding: 0 0.5rem;
+  }
 }
 #solutions .solutions--card-2 img, #solutions .solutions--card-3 img, #solutions .solutions--card-4 img, #solutions .solutions--card-5 img, #solutions .solutions--card-6 img {
   height: 6.4rem;
@@ -134,13 +185,28 @@ body {
   grid-area: card2;
   background-color: #f6a560;
 }
+@media screen and (max-width: 540px) {
+  #solutions .solutions--card-2 {
+    height: 18.5rem;
+  }
+}
 #solutions .solutions--card-3 {
   grid-area: card3;
   background-color: #f39e9e;
 }
+@media screen and (max-width: 540px) {
+  #solutions .solutions--card-3 {
+    height: 18.5rem;
+  }
+}
 #solutions .solutions--card-4 {
   grid-area: card4;
   background-color: #eb7565;
+}
+@media screen and (max-width: 540px) {
+  #solutions .solutions--card-4 {
+    height: 18.5rem;
+  }
 }
 #solutions .solutions--card-5 {
   grid-area: card5;
@@ -151,11 +217,21 @@ body {
     height: 18.5rem;
   }
 }
+@media screen and (max-width: 540px) {
+  #solutions .solutions--card-5 {
+    height: 18.5rem;
+  }
+}
 #solutions .solutions--card-6 {
   grid-area: card6;
   background-color: #552049;
 }
 @media screen and (max-width: 860px) {
+  #solutions .solutions--card-6 {
+    height: 18.5rem;
+  }
+}
+@media screen and (max-width: 540px) {
   #solutions .solutions--card-6 {
     height: 18.5rem;
   }
@@ -184,6 +260,11 @@ body {
   justify-content: space-between;
   margin-top: 6rem;
 }
+@media screen and (max-width: 540px) {
+  #who-i-am {
+    flex-direction: column;
+  }
+}
 #who-i-am img {
   height: 44.5rem;
 }
@@ -195,10 +276,25 @@ body {
     height: auto;
   }
 }
+@media screen and (max-width: 540px) {
+  #who-i-am img {
+    max-width: 90%;
+    margin: 0;
+  }
+}
 #who-i-am .who-i-am__text-container {
   width: 50%;
   max-width: 54rem;
   margin-left: 6rem;
+}
+@media screen and (max-width: 540px) {
+  #who-i-am .who-i-am__text-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    margin-top: 4rem;
+    text-align: center;
+  }
 }
 #who-i-am .who-i-am__text-container p {
   color: #7a746e;
@@ -246,6 +342,11 @@ body {
   width: 14.4rem;
   margin-top: 6rem;
 }
+@media screen and (max-width: 540px) {
+  #my-work .slide--buttons {
+    margin-top: calc(6rem / 2);
+  }
+}
 
 #book-call {
   grid-area: bookCall;
@@ -277,7 +378,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 6rem;
+}
+
+#author {
+  grid-area: author;
+  text-align: center;
+}
+#author * {
+  font-size: 1.4rem;
 }
 
 *,

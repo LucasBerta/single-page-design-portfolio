@@ -8,8 +8,8 @@
   "author": "Lucas Berta",
   "private": true,
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "sass": "^1.55.0"
-  },
-  "devDependencies": {}
+  }
 }

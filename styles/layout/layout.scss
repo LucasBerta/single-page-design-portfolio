@@ -5,7 +5,6 @@ body {
   display: grid;
   padding-top: 3rem;
   gap: $mainGridGap;
-  grid-template-rows: repeat(5, max-content);
   grid-template-columns: minmax(1fr, 2rem) repeat(6, 1fr) minmax(1fr, 2rem);
   grid-template-areas:
     "....... topbar     topbar     topbar     topbar     topbar     topbar    ......"
@@ -16,7 +15,8 @@ body {
     "....... ........   ........   ........   ........   ........   ........  ......"
     "....... bookCall   bookCall   bookCall   bookCall   bookCall   bookCall  ......"
     "....... ........   ........   ........   ........   ........   ........  ......"
-    "....... footer     footer     footer     footer     footer     footer    ......";
+    "....... footer     footer     footer     footer     footer     footer    ......"
+    "author  author     author     author     author     author     author    author";
 
   @include screenSizeTablet {
     grid-template-columns: 0.5rem repeat(4, 1fr) 0.5rem;
@@ -29,7 +29,26 @@ body {
       "...... ........  ........  ........  ........  ......"
       "...... bookCall  bookCall  bookCall  bookCall  ......"
       "...... ........  ........  ........  ........  ......"
-      "...... footer    footer    footer    footer    ......";
+      "...... footer    footer    footer    footer    ......"
+      "author author    author    author    author    author";
     gap: 3rem;
+  }
+
+  @include screenSizeTablet {
+    grid-template-columns: 0 1fr 0;
+    grid-template-areas:
+      "...... topbar    ......"
+      "...... solutions ......"
+      "...... whoIAm    ......"
+      "...... ........  ......"
+      "myWork myWork    myWork"
+      "...... ........  ......"
+      "...... ........  ......"
+      "...... bookCall  ......"
+      "...... ........  ......"
+      "...... footer    ......"
+      "author author    author";
+    row-gap: 3rem;
+    column-gap: 2rem;
   }
 }

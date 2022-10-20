@@ -8,6 +8,12 @@ h1 {
 
   @include screenSizeTablet {
     font-size: 4.4rem;
+    line-height: 6rem;
+  }
+
+  @include screenSizeMobile {
+    font-size: 3.6rem;
+    line-height: 4.5rem;
   }
 }
 
@@ -20,12 +26,22 @@ h2 {
     font-size: 3.2rem;
     line-height: 4rem;
   }
+
+  @include screenSizeMobile {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
 }
 
 h3 {
   font-size: 3.2rem;
   line-height: 4rem;
   margin-bottom: 3rem;
+
+  @include screenSizeMobile {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
 }
 
 h4 {
@@ -36,4 +52,9 @@ h4 {
 p {
   font-size: 1.8rem;
   line-height: 2.8rem;
+
+  @include screenSizeTablet {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
 }

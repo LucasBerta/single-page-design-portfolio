@@ -44,6 +44,10 @@
       justify-content: space-between;
       width: 14.4rem;
       margin-top: $mainGridGap;
+
+      @include screenSizeMobile {
+        margin-top: calc(#{$mainGridGap} / 2);
+      }
     }
   }
 }

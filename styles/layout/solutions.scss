@@ -30,6 +30,20 @@ $cardLogoM: 6.4rem;
     gap: 2rem;
   }
 
+  @include screenSizeMobile {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "title title"
+      "..... ....."
+      "card1 card1"
+      "card2 card3"
+      "card2 card3"
+      "card4 card4"
+      "card5 card5"
+      "card6 card6";
+    gap: 2rem;
+  }
+
   .solutions {
     $highestCard: 37rem;
 
@@ -39,6 +53,10 @@ $cardLogoM: 6.4rem;
       p {
         padding: 0 15%;
         color: $mediumBrown;
+
+        @include screenSizeMobile {
+          padding: 0 0.5rem;
+        }
       }
     }
 
@@ -65,16 +83,28 @@ $cardLogoM: 6.4rem;
     &--card-2 {
       grid-area: card2;
       background-color: $summerYellow;
+
+      @include screenSizeMobile {
+        height: $highestCard * 0.5;
+      }
     }
 
     &--card-3 {
       grid-area: card3;
       background-color: $pink;
+
+      @include screenSizeMobile {
+        height: $highestCard * 0.5;
+      }
     }
 
     &--card-4 {
       grid-area: card4;
       background-color: $accent;
+
+      @include screenSizeMobile {
+        height: $highestCard * 0.5;
+      }
     }
 
     &--card-5 {
@@ -84,6 +114,10 @@ $cardLogoM: 6.4rem;
       @include screenSizeTablet {
         height: $highestCard * 0.5;
       }
+
+      @include screenSizeMobile {
+        height: $highestCard * 0.5;
+      }
     }
 
     &--card-6 {
@@ -91,6 +125,10 @@ $cardLogoM: 6.4rem;
       background-color: $darkPurple;
 
       @include screenSizeTablet {
+        height: $highestCard * 0.5;
+      }
+
+      @include screenSizeMobile {
         height: $highestCard * 0.5;
       }
     }

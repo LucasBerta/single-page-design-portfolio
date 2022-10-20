@@ -10,6 +10,11 @@
   background-color: transparent;
   transition: all 0.2s ease-in-out;
 
+  @include screenSizeMobile {
+    font-size: 1.4rem;
+    padding: 1.2rem 3.5rem;
+  }
+
   &,
   &:focus,
   &:hover,
