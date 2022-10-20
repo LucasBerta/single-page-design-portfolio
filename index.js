@@ -1,4 +1,5 @@
 let slideIndex = 0;
+let waitToSlide = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   const prev = document.getElementById("slide-prev");
@@ -6,6 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   prev.addEventListener("click", () => slide("left"));
   next.addEventListener("click", () => slide("right"));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") slide("left");
+    if (e.key === "ArrowRight") slide("right");
+  });
 });
 
 function slide(direction) {
@@ -16,12 +21,10 @@ function slide(direction) {
   ).getPropertyValue("--slides-visible");
 
   if (direction === "left") {
-    if (slideIndex <= 0) return;
-    slideIndex--;
+    if (!slideLeft()) return;
   }
   if (direction === "right") {
-    if (slideIndex >= imgs.length - slidesVisible) return;
-    slideIndex++;
+    if (!slideRight(imgs, slidesVisible)) return;
   }
 
   for (let index = 0; index < imgs.length; index++) {
@@ -40,6 +43,27 @@ function slide(direction) {
       }px)`;
     }
   }
+}
+
+function slideLeft() {
+  if (slideIndex <= 0 || waitToSlide) return;
+  setWaitToSlide();
+  slideIndex--;
+  return true;
+}
+
+function slideRight(imgs, slidesVisible) {
+  if (slideIndex >= imgs.length - slidesVisible || waitToSlide) return;
+  setWaitToSlide();
+  slideIndex++;
+  return true;
+}
+
+function setWaitToSlide() {
+  waitToSlide = true;
+  setTimeout(() => {
+    waitToSlide = false;
+  }, 200);
 }
 
 function isInViewport(element) {
