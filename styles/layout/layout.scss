@@ -4,6 +4,7 @@
 body {
   display: grid;
   padding-top: 3rem;
+  background-color: $lightCream;
   gap: $mainGridGap;
   grid-template-columns: minmax(1fr, 2rem) repeat(6, 1fr) minmax(1fr, 2rem);
   grid-template-areas:
