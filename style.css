@@ -40,7 +40,7 @@ h1 {
   line-height: 7rem;
   margin-bottom: 2rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   h1 {
     font-size: 4.4rem;
   }
@@ -51,7 +51,7 @@ h2 {
   line-height: 5.1rem;
   margin-bottom: 3rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   h2 {
     font-size: 3.2rem;
     line-height: 4rem;
@@ -80,12 +80,12 @@ body {
   gap: 6rem;
   grid-template-rows: repeat(5, max-content);
   grid-template-columns: minmax(1fr, 2rem) repeat(6, 1fr) minmax(1fr, 2rem);
-  grid-template-areas: "....... topbar     topbar     topbar     topbar     topbar     topbar    ......" "....... ........   ........   ........   ........   ........   ........  ......" "....... solutions  solutions  solutions  solutions  solutions  solutions ......" "....... whoIAm     whoIAm     whoIAm     whoIAm     whoIAm     whoIAm    ......" "myWork  myWork     myWork     myWork     myWork     myWork     myWork    myWork" "....... bookCall   bookCall   bookCall   bookCall   bookCall   bookCall  ......" "....... ........   ........   ........   ........   ........   ........  ......" "....... footer     footer     footer     footer     footer     footer    ......";
+  grid-template-areas: "....... topbar     topbar     topbar     topbar     topbar     topbar    ......" "....... solutions  solutions  solutions  solutions  solutions  solutions ......" "....... whoIAm     whoIAm     whoIAm     whoIAm     whoIAm     whoIAm    ......" "....... ........   ........   ........   ........   ........   ........  ......" "myWork  myWork     myWork     myWork     myWork     myWork     myWork    myWork" "....... ........   ........   ........   ........   ........   ........  ......" "....... bookCall   bookCall   bookCall   bookCall   bookCall   bookCall  ......" "....... ........   ........   ........   ........   ........   ........  ......" "....... footer     footer     footer     footer     footer     footer    ......";
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   body {
     grid-template-columns: 0.5rem repeat(4, 1fr) 0.5rem;
-    grid-template-areas: "...... topbar    topbar    topbar    topbar    ......" "...... ........  ........  ........  ........  ......" "...... solutions solutions solutions solutions ......" "whoIAm whoIAm    whoIAm    whoIAm    whoIAm    ......" "myWork myWork    myWork    myWork    myWork    myWork" "...... bookCall  bookCall  bookCall  bookCall  ......" "...... ........  ........  ........  ........  ......" "...... footer    footer    footer    footer    ......";
+    grid-template-areas: "...... topbar    topbar    topbar    topbar    ......" "...... solutions solutions solutions solutions ......" "whoIAm whoIAm    whoIAm    whoIAm    whoIAm    ......" "...... ........  ........  ........  ........  ......" "myWork myWork    myWork    myWork    myWork    myWork" "...... ........  ........  ........  ........  ......" "...... bookCall  bookCall  bookCall  bookCall  ......" "...... ........  ........  ........  ........  ......" "...... footer    footer    footer    footer    ......";
     gap: 3rem;
   }
 }
@@ -105,7 +105,7 @@ body {
   gap: 3rem;
   grid-template-areas: "..... title title title title ....." "..... ..... ..... ..... ..... ....." "..... ..... ..... ..... ..... ....." "card1 card1 card2 card3 card5 card5" "card1 card1 card4 card4 card6 card6";
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   #solutions {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "title title title title" "..... ..... ..... ....." "..... ..... ..... ....." "card1 card1 card2 card3" "card1 card1 card4 card4" "card5 card5 card6 card6";
@@ -146,7 +146,7 @@ body {
   grid-area: card5;
   background-color: #61c4b7;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   #solutions .solutions--card-5 {
     height: 18.5rem;
   }
@@ -155,7 +155,7 @@ body {
   grid-area: card6;
   background-color: #552049;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   #solutions .solutions--card-6 {
     height: 18.5rem;
   }
@@ -187,7 +187,7 @@ body {
 #who-i-am img {
   height: 44.5rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   #who-i-am img {
     margin-left: -4.5rem;
     max-width: 50%;
@@ -208,7 +208,7 @@ body {
 :root {
   --slides-visible: 3;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   :root {
     --slides-visible: 1;
   }
@@ -232,7 +232,7 @@ body {
   margin-right: 1rem;
   transition: transform 0.2s ease-in-out;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   #my-work .slide img {
     margin-right: 0;
     height: auto;
@@ -257,10 +257,10 @@ body {
   color: #fff7f0;
   border-radius: 1rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   #book-call {
     flex-direction: column;
-    padding: 7rem;
+    padding: 5.5rem;
     text-align: center;
   }
   #book-call .book-call__text-container {
